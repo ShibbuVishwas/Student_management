@@ -44,7 +44,7 @@ public class StudentRestController {
         String branch = sessionService.getProfessorBranch(session);
         return studentService.updateStudent(id, studentDto, branch);
     }
-
+// using this to find the record via id
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteStudent(@PathVariable Long id, HttpSession session) {
