@@ -36,7 +36,7 @@ public class StudentRestController {
         String branch = sessionService.getProfessorBranch(session);
         return studentService.createStudent(studentDto, branch);
     }
-
+//update
     @PutMapping("/{id}")
     public StudentDto updateStudent(@PathVariable Long id,
                                     @RequestBody StudentDto studentDto,
