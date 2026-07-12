@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | Student Management</title>
+    <link rel="stylesheet" href="/css/login.css" />
+</head>
+<body>
+<div class="scene" id="scene">
+    <div class="lamp-side">
+        <div class="desk">
+            <div class="lamp-glow" aria-hidden="true"></div>
+
+            <div class="lamp">
+                <div class="lamp-shade">
+                    <span class="lamp-eye"></span>
+                    <span class="lamp-eye"></span>
+                    <span class="lamp-smile"></span>
+
+                    <div class="pull-cord">
+                        <div class="cord-line" id="cordLine"></div>
+                        <button type="button" class="cord-handle" id="cordHandle" aria-label="Pull the thread to turn on the light"></button>
+                    </div>
+                </div>
+
+                <div class="lamp-arm"></div>
+                <div class="lamp-base"></div>
+            </div>
+        </div>
+
+        <p class="lamp-hint">Pull the thread</p>
+    </div>
+
+    <div class="login-panel">
+        <h1 class="panel-title">Welcome Back</h1>
+
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="username">Email</label>
+                <input type="email" id="username" name="username" placeholder="Enter your email" autocomplete="username" required />
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" autocomplete="current-password" required />
+            </div>
+
+            <button type="submit" class="login-btn">Login</button>
+        </form>
+
+        <div id="createAccountSection" class="create-account-section" hidden>
+            <p class="create-account-text">This email is not registered.</p>
+
+            <div class="form-group">
+                <label for="branch">Branch</label>
+                <select id="branch" required>
+                    <option value="">Select branch</option>
+                    <option value="CSE">CSE</option>
+                    <option value="IT">IT</option>
+                    <option value="ECE">ECE</option>
+                    <option value="MECH">MECH</option>
+                </select>
+            </div>
+
+            <button type="button" id="createAccountBtn" class="login-btn create-btn">Create Account</button>
+        </div>
+
+        <p id="message" class="message" aria-live="polite"></p>
+    </div>
+</div>
+
+<script src="/js/login.js"></script>
+</body>
+</html>
